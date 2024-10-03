@@ -379,7 +379,7 @@ const commandsMap: (
       captureCommandTelemetry("fixGrammar");
       streamInlineEdit(
         "fixGrammar",
-        "如果本文有任何语法或拼写错误，请予以纠正。请勿对本文进行其他大幅度修改。",
+        "If there are any grammar or spelling mistakes in this writing, fix them. Do not make other large changes to the writing.",
       );
     },
     "continue.viewLogs": async () => {
