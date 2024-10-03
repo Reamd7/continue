@@ -107,22 +107,22 @@
         "continue.enableDebugLogs": {
           "type": "boolean",
           "default": false,
-          "markdownDescription": "Enable Continue Debug Logs in the Output panel."
+          "markdownDescription": "在输出面板中启用调试日志。"
         },
         "continue.remoteConfigServerUrl": {
           "type": "string",
           "default": null,
-          "markdownDescription": "If your team is set up to use shared configuration, enter the server URL here and your user token below to enable automatic syncing."
+          "markdownDescription": "如果您的团队设置为使用共享配置，请在此处输入服务器 URL 并在下面输入您的用户令牌以启用自动同步。"
         },
         "continue.userToken": {
           "type": "string",
           "default": null,
-          "markdownDescription": "If your team is set up to use shared configuration, enter your user token here and your server URL above to enable automatic syncing."
+          "markdownDescription": "如果您的团队设置为使用共享配置，请在此处输入您的用户令牌并在上面输入您的服务器 URL，以启用自动同步。"
         },
         "continue.remoteConfigSyncPeriod": {
           "type": "number",
           "default": 60,
-          "description": "The period of time in minutes between automatic syncs."
+          "description": "自动同步之间的时间间隔（以分钟为单位）。"
         }
       }
     },
@@ -155,25 +155,25 @@
       {
         "command": "continue.quickEdit",
         "category": "Continue",
-        "title": "Generate Code",
+        "title": "生成代码",
         "group": "Continue"
       },
       {
         "command": "continue.focusContinueInput",
         "category": "Continue",
-        "title": "Add Highlighted Code to Context",
+        "title": "将突出显示的代码添加到上下文中",
         "group": "Continue"
       },
       {
         "command": "continue.focusContinueInputWithoutClear",
         "category": "Continue",
-        "title": "Add Highlighted Code to Context",
+        "title": "将突出显示的代码添加到上下文中",
         "group": "Continue"
       },
       {
         "command": "continue.debugTerminal",
         "category": "Continue",
-        "title": "Debug Terminal",
+        "title": "调试终端",
         "group": "Continue"
       },
       {
@@ -192,51 +192,51 @@
       {
         "command": "continue.toggleTabAutocompleteEnabled",
         "category": "Continue",
-        "title": "Toggle Autocomplete Enabled",
+        "title": "启用自动完成功能",
         "group": "Continue"
       },
       {
         "command": "continue.selectFilesAsContext",
         "category": "Continue",
-        "title": "Select Files as Context",
+        "title": "选择文件作为上下文",
         "group": "Continue"
       },
       {
         "command": "continue.newSession",
         "category": "Continue",
-        "title": "New Session",
+        "title": "新会话",
         "icon": "$(add)",
         "group": "Continue"
       },
       {
         "command": "continue.viewHistory",
         "category": "Continue",
-        "title": "View History",
+        "title": "查看历史记录",
         "icon": "$(history)",
         "group": "Continue"
       },
       {
         "command": "continue.writeCommentsForCode",
         "category": "Continue",
-        "title": "Write Comments for this Code",
+        "title": "为这段代码写注释",
         "group": "Continue"
       },
       {
         "command": "continue.writeDocstringForCode",
         "category": "Continue",
-        "title": "Write a Docstring for this Code",
+        "title": "为该代码编写文档字符串",
         "group": "Continue"
       },
       {
         "command": "continue.fixCode",
         "category": "Continue",
-        "title": "Fix this Code",
+        "title": "修复此代码",
         "group": "Continue"
       },
       {
         "command": "continue.optimizeCode",
         "category": "Continue",
-        "title": "Optimize this Code",
+        "title": "优化此代码",
         "group": "Continue"
       },
       {

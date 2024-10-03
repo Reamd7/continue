@@ -351,7 +351,7 @@ const commandsMap: (
 
       streamInlineEdit(
         "comment",
-        "Write comments for this code. Do not change anything about the code itself.",
+        "为这段代码写注释。不要更改代码本身的任何内容。",
       );
     },
     "continue.writeDocstringForCode": async () => {
@@ -359,7 +359,7 @@ const commandsMap: (
 
       streamInlineEdit(
         "docstring",
-        "Write a docstring for this code. Do not change anything about the code itself.",
+        "为该代码编写一个文档字符串。不要更改代码本身的任何内容。",
         true,
       );
     },
@@ -368,18 +368,18 @@ const commandsMap: (
 
       streamInlineEdit(
         "fix",
-        "Fix this code. If it is already 100% correct, simply rewrite the code.",
+        "修复此代码. 如果已经 100% 正确，只需重写代码。",
       );
     },
     "continue.optimizeCode": async () => {
       captureCommandTelemetry("optimizeCode");
-      streamInlineEdit("optimize", "Optimize this code");
+      streamInlineEdit("optimize", "优化此代码");
     },
     "continue.fixGrammar": async () => {
       captureCommandTelemetry("fixGrammar");
       streamInlineEdit(
         "fixGrammar",
-        "If there are any grammar or spelling mistakes in this writing, fix them. Do not make other large changes to the writing.",
+        "如果本文有任何语法或拼写错误，请予以纠正。请勿对本文进行其他大幅度修改。",
       );
     },
     "continue.viewLogs": async () => {

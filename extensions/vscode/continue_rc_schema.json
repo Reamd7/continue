@@ -2834,23 +2834,23 @@
               "properties": {
                 "comment": {
                   "type": "string",
-                  "default": "Write comments for this code. Do not change anything about the code itself."
+                  "default": "为这段代码写注释。不要更改代码本身的任何内容。"
                 },
                 "docstring": {
                   "type": "string",
-                  "default": "Write a docstring for this code. Do not change anything about the code itself."
+                  "default": "为该代码编写一个文档字符串。不要更改代码本身的任何内容。"
                 },
                 "fix": {
                   "type": "string",
-                  "default": "Fix this code"
+                  "default": "修复此代码"
                 },
                 "optimize": {
                   "type": "string",
-                  "default": "Optimize this code"
+                  "default": "优化此代码"
                 },
                 "fixGrammar": {
                   "type": "string",
-                  "default": "If there are any grammar or spelling mistakes in this writing, fix them. Do not make other large changes to the writing."
+                  "default": "如果本文有任何语法或拼写错误，请予以纠正。请勿对本文进行其他大幅度修改。"
                 }
               }
             }
