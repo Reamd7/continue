@@ -114,41 +114,48 @@ async function gatherProjectContext(
 
 function createOnboardingPrompt(context: string): string {
   return `
-    As a helpful AI assistant, your task is to onboard a new developer to this project. 
-    Use the following context about the project structure, READMEs, and dependency files to create a comprehensive overview:
+    作为一个有帮助的AI助手，你的任务是让一位新开发者加入这个项目。使用以下关于项目结构、README文件和依赖文件的上下文，创建一个全面的概述：
 
-    ${context}
+  ${context}
 
-    Please provide an overview of the project with the following guidelines:
-    - Determine the most important folders in the project, at most 10
-    - Go through each important folder step-by-step:
-      - Explain what each folder does in isolation by summarzing the README or package.json file, if available
-      - Mention the most popular or common packages used in that folder and their roles.
-    - After covering individual folders, zoom out to explain at most 5 high-level insights about the project's architecture:
-      - How different parts of the codebase fit together.
-      - The overall project architecture or design patterns evident from the folder structure and dependencies.
-    - Provide at most 5 additional insights on the project's architecture that weren't covered in the folder-by-folder breakdown.
+  请根据以下指南提供项目的概述：
 
-    Your response should be structured, clear, and focused on giving the new developer both a detailed understanding of individual components and a high-level overview of the project as a whole.
+  确定项目中最重要的一些文件夹，最多10个
 
-    Here is an example of a valid response:
+  逐步介绍每个重要文件夹：
+
+  如果可用，通过总结README或package.json文件，解释每个文件夹的独立功能
+
+  提及在该文件夹中使用最多的或最常见的包及其角色
+
+  在介绍完各个文件夹后，放大视角，解释项目架构的最多5个高层次见解：
+
+  代码库的不同部分如何组合在一起
+
+  从文件夹结构和依赖关系中显而易见的整体项目架构或设计模式
+
+  提供最多5个关于项目架构的额外见解，这些见解在逐个文件夹的分解中未被涵盖
+
+  你的回答应该是结构化的、清晰的，并且专注于给新开发者提供对各个组件的详细理解以及对项目整体的宏观概述。
+
+  以下是一个有效响应的示例：
     
-    ## Important folders
+    ## 重要文件夹
 
     ### /folder1
-    - Description: Contains the main application logic.
-    - Key packages: Express.js for routing, Mongoose for database operations.
+    - 描述：包含主要应用程序逻辑
+    - 关键包：Express.js用于路由，Mongoose用于数据库操作
 
     #### /folder1/folder2
 
-    ## Project Architecture
-    - The frontend is built using React and Redux for state management.
-    - The backend is a Node.js application using Express.js for routing and Mongoose for database operations.
-    - The application follows a Model-View-Controller (MVC) architecture.
+    ## 项目架构
+    - 前端使用React和Redux进行状态管理
+    - 后端是一个使用Express.js进行路由和Mongoose进行数据库操作的Node.js应用程序
+    - 应用程序遵循模型-视图-控制器（MVC）架构
 
-    ## Additional Insights
-    - The project is using a monorepo structure.
-    - The project uses TypeScript for type checking.
+    ## 额外见解
+    - 项目使用monorepo结构
+    - 项目使用TypeScript进行类型检查
   `;
 }
 

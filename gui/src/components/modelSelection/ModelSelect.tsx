@@ -319,7 +319,7 @@ function ModelSelect() {
           onClick={calculatePosition}
         >
           <span className="hover:underline">
-            {modelSelectTitle(defaultModel) || "Select model"}{" "}
+            {modelSelectTitle(defaultModel) || "选择模型"}{" "}
             <ChevronDownIcon className="h-2.5 w-2.5" aria-hidden="true" />
           </span>
         </StyledListboxButton>
@@ -348,7 +348,7 @@ function ModelSelect() {
                 >
                   <div className="flex items-center py-0.5">
                     <PlusIcon className="w-4 h-4 mr-2" />
-                    Add Chat model
+                    添加聊天模型
                   </div>
                 </StyledListboxOption>
               </>

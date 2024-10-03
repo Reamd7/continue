@@ -59,9 +59,9 @@ function QuickstartSubmitButton() {
         onClick={onClick}
         className="grid grid-flow-col items-center gap-2 w-full"
       >
-        Get started using our API keys
+      开始使用我们的 API 密钥
       </Button>
-      <ButtonSubtext>Try 50 chat and 2k autocomplete requests</ButtonSubtext>
+      <ButtonSubtext>尝试 50 个聊天和 2k 个自动完成请求</ButtonSubtext>
     </div>
   );
 }

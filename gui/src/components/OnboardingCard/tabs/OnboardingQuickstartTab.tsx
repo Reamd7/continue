@@ -10,12 +10,11 @@ function OnboardingQuickstartTab() {
         </div>
 
         <p className="text-sm">
-          Quickly get up and running using our API keys. After this trial, we'll
-          help you set up your own models.
+        使用我们的 API 密钥快速启动并运行。试用后，我们将帮助您设置自己的模型。
         </p>
 
         <p className="text-sm">
-          To prevent abuse, we'll ask you to sign in to GitHub.
+        为防止滥用，我们将要求您登录 GitHub。
         </p>
 
         <QuickStartSubmitButton />

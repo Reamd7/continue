@@ -18,9 +18,9 @@ import {
   type RangeInFileWithContents,
 } from "../util";
 
-const PROMPT = `Take the file prefix and suffix into account, but only rewrite the code_to_edit as specified in the user_request. The code you write in modified_code_to_edit will replace the code between the code_to_edit tags. Do NOT preface your answer or write anything other than code. The </modified_code_to_edit> tag should be written to indicate the end of the modified code section. Do not ever use nested tags.
+const PROMPT = `请考虑文件的前缀和后缀，但只根据用户请求重写code_to_edit部分。你在modified_code_to_edit中编写的代码将替换code_to_edit标签之间的代码。不要在答案前添加任何内容，也不要编写除代码以外的任何内容。</modified_code_to_edit>标签应写入以指示修改代码部分的结束。切勿使用嵌套标签。
 
-Example:
+示例如下:
 
 <file_prefix>
 class Database:

@@ -12,19 +12,19 @@ function commandIsPotentiallyDangerous(command: string) {
 
 const GenerateTerminalCommand: SlashCommand = {
   name: "cmd",
-  description: "Generate a shell command",
+  description: "生成一个shell命令",
   run: async function* ({ ide, llm, input }) {
     if (input.trim() === "") {
-      yield "Please provide a description of the shell command you want to generate. For example, '/cmd List all files in the current directory'.";
+      yield "请提供你想要生成的shell命令的描述。例如，'/cmd 列出当前目录中的所有文件'。";
       return;
     }
 
     const gen =
-      llm.streamComplete(`The user has made a request to run a shell command. Their description of what it should do is:
+      llm.streamComplete(`用户请求运行一个shell命令。他们的描述是：
 
 "${input}"
 
-Please write a shell command that will do what the user requested. Your output should consist of only the command itself, without any explanation or example output. Do not use any newlines. Only output the command that when inserted into the terminal will do precisely what was requested. Here is the command:`);
+请编写一个shell命令，以实现用户请求的功能。你的输出应仅包含命令本身，不带任何解释或示例输出。不要使用任何换行符。只输出插入终端后能精确执行请求的命令。以下是命令：`);
 
     const lines = streamLines(gen);
     let cmd = "";
@@ -48,9 +48,9 @@ Please write a shell command that will do what the user requested. Your output s
       break;
     }
 
-    yield `Generated shell command: ${cmd}`;
+    yield `生成但shell命令: ${cmd}`;
     if (commandIsPotentiallyDangerous(cmd)) {
-      yield "\n\nWarning: This command may be potentially dangerous. Please double-check before pasting it in your terminal.";
+      yield "\n\n警告：此命令可能具有潜在危险性。请在粘贴到终端前仔细检查。";
     } else {
       await ide.runCommand(cmd);
     }

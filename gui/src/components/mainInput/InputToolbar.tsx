@@ -119,7 +119,7 @@ function InputToolbar(props: InputToolbarProps) {
               }}
               className="hover:underline cursor-pointer"
             >
-              Add Context{" "}
+              添加上下文{" "}
               <PlusIcon className="h-2.5 w-2.5" aria-hidden="true" />
             </StyledSpan>
             {defaultModel &&
@@ -182,7 +182,7 @@ function InputToolbar(props: InputToolbarProps) {
               }}
             >
               {getAltKeyLabel()} ⏎{" "}
-              {useActiveFile ? "No context" : "Use active file"}
+              {useActiveFile ? "没有上下文" : "使用当前文件"}
             </span>
           ) : (
             <StyledSpan
@@ -202,7 +202,7 @@ function InputToolbar(props: InputToolbarProps) {
               }}
               className={"hover:underline cursor-pointer float-right"}
             >
-              {getMetaKeyLabel()} ⏎ Use codebase
+              {getMetaKeyLabel()} ⏎ 使用代码库
             </StyledSpan>
           )}
           <EnterButton

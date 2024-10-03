@@ -8,7 +8,7 @@ const CommentSlashCommand: SlashCommand = {
     for await (const update of EditSlashCommand.run({
       ...sdk,
       input:
-        "Write comments for this code. Do not change anything about the code itself.",
+        "为这段代码写注释。不要改变代码本身的内容。",
     })) {
       yield update;
     }

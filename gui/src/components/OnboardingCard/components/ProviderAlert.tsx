@@ -20,16 +20,16 @@ function ProviderAlert() {
     <div>
       <Alert type="info">
         <p className="font-semibold text-sm m-0">
-          Prefer to use an different provider like OpenAI?
+          想要使用像 OpenAI 这样的其他提供商吗？
         </p>
         <p className="m-0 mt-1">
           <a
             className="text-inherit underline cursor-pointer hover:text-inherit"
             onClick={onClick}
           >
-            Click here
+            单击此处
           </a>{" "}
-          to add a Chat model from OpenAI, Gemini, and more
+          添加来自 OpenAI、Gemini 等的聊天模型
         </p>
       </Alert>
     </div>

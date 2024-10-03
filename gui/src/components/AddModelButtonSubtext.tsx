@@ -7,12 +7,12 @@ function AddModelButtonSubtext() {
 
   return (
     <ButtonSubtext>
-      This will update your{" "}
+      这将更新您的{" "}
       <span
         className="underline cursor-pointer"
         onClick={() => ideMessenger.post("openConfigJson", undefined)}
       >
-        config file
+        配置文件
       </span>
     </ButtonSubtext>
   );

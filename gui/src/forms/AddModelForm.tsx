@@ -86,13 +86,13 @@ function AddModelForm({
     <FormProvider {...formMethods}>
       <form onSubmit={formMethods.handleSubmit(onSubmit)}>
         <div className="p-6 max-w-md mx-auto">
-          <h1 className="text-center mb-0">Add Chat model</h1>
+          <h1 className="text-center mb-0">添加聊天模型</h1>
           {!hideFreeTrialLimitMessage && hasPassedFTL() && (
             <p className="text-sm text-gray-500">
-              You've reached the free trial limit of {FREE_TRIAL_LIMIT_REQUESTS}{" "}
-              free inputs. To keep using Continue, you can either use your own
-              API key, or use a local LLM. To read more about the options, see
-              our{" "}
+              您已达到免费试用限制：{FREE_TRIAL_LIMIT_REQUESTS}{" "}
+              免费输入。要继续使用 Continue，您可以使用自己的
+              API 密钥，或使用本地 LLM。要了解有关选项的更多信息，请参阅
+              我们的{" "}
               <a
                 href="https://docs.continue.dev/setup/overview"
                 target="_blank"
@@ -103,7 +103,7 @@ function AddModelForm({
                   )
                 }
               >
-                documentation
+                文档
               </a>
               .
             </p>
@@ -122,22 +122,22 @@ function AddModelForm({
                   .map(([, provider]) => provider)}
               ></ModelSelectionListbox>
               <InputSubtext className="mb-0">
-                Don't see your provider?{" "}
+                没有看到您的提供商？{" "}
                 <a
                   href="https://docs.continue.dev/customize/model-providers"
                   target="_blank"
                   className="text-inherit underline cursor-pointer hover:text-inherit"
                 >
-                  Click here
+                  点击此处
                 </a>{" "}
-                to view the full list
+                查看完整列表
               </InputSubtext>
             </div>
 
             {selectedProvider.downloadUrl && (
               <div>
                 <label className="block text-sm font-medium mb-1">
-                  Install provider
+                  安装提供程序
                 </label>
 
                 <StyledActionButton onClick={onClickDownloadProvider}>
@@ -165,10 +165,9 @@ function AddModelForm({
             {selectedModel.params.model.startsWith("codestral") && (
               <div className="my-2">
                 <Alert>
-                  <p className="font-bold text-sm m-0">Codestral API key</p>
+                  <p className="font-bold text-sm m-0">Codestral API 密钥</p>
                   <p className="m-0 mt-1">
-                    Note that codestral requires a different API key from other
-                    Mistral models
+                    请注意，codestral 需要与其他 Mistral 型号不同的 API 密钥
                   </p>
                 </Alert>
               </div>
@@ -177,11 +176,11 @@ function AddModelForm({
             {selectedProvider.apiKeyUrl && (
               <div>
                 <>
-                  <label className="block text-sm font-medium">API key</label>
+                  <label className="block text-sm font-medium">API 密钥</label>
                   <Input
                     id="apiKey"
                     className="w-full"
-                    placeholder={`Enter your ${selectedProvider.title} API key`}
+                    placeholder={`输入您的 ${selectedProvider.title} API 密钥`}
                     {...formMethods.register("apiKey")}
                   />
                   <InputSubtext className="mb-0">
@@ -190,9 +189,9 @@ function AddModelForm({
                       target="_blank"
                       className="text-inherit underline cursor-pointer hover:text-inherit"
                     >
-                      Click here
+                      点击这里
                     </a>{" "}
-                    to create a {selectedProvider.title} API key
+                    创建 {selectedProvider.title} API 密钥
                   </InputSubtext>
                 </>
               </div>
@@ -201,7 +200,7 @@ function AddModelForm({
 
           <div className="mt-4 w-full">
             <Button type="submit" className="w-full" disabled={isDisabled()}>
-              Connect
+              连接
             </Button>
             <AddModelButtonSubtext />
           </div>

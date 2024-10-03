@@ -272,12 +272,12 @@ function TipTapEditor(props: TipTapEditorProps) {
 
   function getPlaceholder() {
     if (!hasDefaultModel) {
-      return "Configure a Chat model to get started";
+      return "配置聊天模型以开始使用";
     }
 
     return historyLengthRef.current === 0
-      ? "Ask anything, '/' for slash commands, '@' to add context"
-      : "Ask a follow-up";
+      ? "询问任何问题，“/”表示斜线命令，“@”表示添加上下文"
+      : "询问后续";
   }
 
   const editor: Editor = useEditor({

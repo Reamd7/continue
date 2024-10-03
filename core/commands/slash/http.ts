@@ -3,7 +3,7 @@ import { removeQuotesAndEscapes } from "../../util/index.js";
 
 const HttpSlashCommand: SlashCommand = {
   name: "http",
-  description: "Call an HTTP endpoint to serve response",
+  description: "调用HTTP端点以提供响应",
   run: async function* ({ ide, llm, input, params, fetch }) {
     const url = params?.url;
     if (!url) {

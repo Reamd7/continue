@@ -63,18 +63,18 @@ function OnboardingLocalTab() {
   return (
     <div className="flex flex-col gap-2">
       <div className="flex flex-col">
-        <p className="text-lg font-bold leading-tight mb-2">Install Ollama</p>
+        <p className="text-lg font-bold leading-tight mb-2">安装 Ollama</p>
         <OllamaStatus onConnectionVerified={onConnectionVerified} />
       </div>
 
       <OllamaModelDownload
-        title="Download Chat model"
+        title="下载聊天模型"
         modelName={LOCAL_ONBOARDING_CHAT_MODEL}
         hasDownloaded={hasDownloadedChatModel}
       />
 
       <OllamaModelDownload
-        title="Download Autocomplete model"
+        title="下载代码自动补全模型"
         modelName={LOCAL_ONBOARDING_FIM_MODEL}
         hasDownloaded={hasDownloadedAutocompleteModel}
       />
@@ -95,7 +95,7 @@ function OnboardingLocalTab() {
           className="w-full"
           disabled={!hasDownloadedChatModel}
         >
-          Connect
+          连接
         </Button>
         <AddModelButtonSubtext />
       </div>

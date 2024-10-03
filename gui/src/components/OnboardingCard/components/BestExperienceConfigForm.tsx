@@ -131,7 +131,7 @@ function BestExperienceConfigForm({
 
         <div className="mt-2 w-full">
           <Button className="w-full" type="submit" disabled={!chatApiKey}>
-            Connect
+            连接
           </Button>
           <AddModelButtonSubtext />
         </div>

@@ -2,17 +2,17 @@ import { SlashCommand } from "../../index.js";
 import { stripImages } from "../../llm/images.js";
 
 const CommitMessageCommand: SlashCommand = {
-  name: "commit",
-  description: "Generate a commit message for current changes",
+  name: "提交",
+  description: "生成当前更改的提交信息",
   run: async function* ({ ide, llm, input }) {
     const diff = await ide.getDiff();
 
     if (!diff || diff.trim() === "") {
-      yield "No changes detected. Make sure you are in a git repository with current changes.";
+      yield "未检测到更改。请确保您位于包含当前更改的 Git 仓库中。";
       return;
     }
 
-    const prompt = `${diff}\n\nGenerate a commit message for the above set of changes. First, give a single sentence, no more than 80 characters. Then, after 2 line breaks, give a list of no more than 5 short bullet points, each no more than 40 characters. Output nothing except for the commit message, and don't surround it in quotes.`;
+    const prompt = `${diff}\n\n生成上述更改集的提交消息。首先，给出一个不超过80个字符的单句。然后，在2个换行符之后，给出一个不超过5个短点的列表，每个点不超过40个字符。除了提交消息外，不要输出任何内容，也不要用引号包围它。`;
     for await (const chunk of llm.streamChat([
       { role: "user", content: prompt },
     ])) {

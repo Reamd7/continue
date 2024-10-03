@@ -5,7 +5,7 @@ import { stripImages } from "../../llm/images.js";
 
 const PROMPT = (
   input: string,
-) => `The above sources are excerpts from related StackOverflow questions. Use them to help answer the below question from our user. Provide links to the sources in markdown whenever possible:
+) => `上述来源是相关StackOverflow问题的摘录。使用它们来帮助回答我们用户的问题。尽可能在Markdown中提供来源链接：
 
 ${input}
 `;

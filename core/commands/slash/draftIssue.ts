@@ -5,21 +5,21 @@ import { removeQuotesAndEscapes } from "../../util/index.js";
 const PROMPT = (
   input: string,
   title: string,
-) => `You will be asked to generate the body of a GitHub issue given a user request. You should follow these rules:
-- Be descriptive but do not make up details
-- If the the user request includes any code snippets that are relevant, reference them in code blocks
-- Describe step by step how to reproduce the problem
-- Describe the ideal solution to the problem
-- Describe the expected behavior after the issue has been resolved
-- This issue will be read by a team member
-- Use markdown formatting, but you do not need to surround the entire body with triple backticks
+) => `你将被要求根据用户请求生成GitHub问题的正文。你应该遵循以下规则：
+- 描述性要强，但不要编造细节
+- 如果用户请求中包含任何相关的代码片段，请在代码块中引用它们
+- 逐步描述如何重现问题
+- 描述解决问题的理想方案
+- 描述问题解决后的预期行为
+- 这个问题将由团队成员阅读
+- 使用Markdown格式，但不需要用三重反引号包围整个正文
 {additional_instructions}
 
-Here is the user request: '${input}'
+以下是用户请求：'${input}'
 
-Title: ${title}
+标题：${title}
 
-Body:\n\n`;
+正文：\n\n`;
 
 const DraftIssueCommand: SlashCommand = {
   name: "issue",
