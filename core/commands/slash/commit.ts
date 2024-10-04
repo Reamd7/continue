@@ -2,7 +2,7 @@ import { SlashCommand } from "../../index.js";
 import { stripImages } from "../../llm/images.js";
 
 const CommitMessageCommand: SlashCommand = {
-  name: "提交",
+  name: "commit",
   description: "生成当前更改的提交信息",
   run: async function* ({ ide, llm, input }) {
     const diff = await ide.getDiff();
