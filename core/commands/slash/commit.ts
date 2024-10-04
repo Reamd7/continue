@@ -12,7 +12,7 @@ const CommitMessageCommand: SlashCommand = {
       return;
     }
 
-    const prompt = `${diff}\n\n生成上述更改集的提交消息。首先，给出一个不超过80个字符的单句。然后，在2个换行符之后，给出一个不超过5个短点的列表，每个点不超过40个字符。除了提交消息外，不要输出任何内容，也不要用引号包围它。`;
+    const prompt = `${diff}\n\n生成上述更改集的提交消息。首先，给出一个不超过80个字符的单句。然后，在2个换行符之后，给出一个不超过5个短点的列表，每个点不超过40个字符。除了提交消息外，不要输出任何内容，也不要用引号包围它。用中文回答消息。提交消息需要符合 angular commit 规范`;
     for await (const chunk of llm.streamChat([
       { role: "user", content: prompt },
     ])) {
